@@ -11,7 +11,6 @@
 		1CAF2B4B1EBE9785009EB9AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */; };
 		1CAF2B4E1EBE9785009EB9AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B4C1EBE9785009EB9AF /* Main.storyboard */; };
 		1CAF2B501EBE9785009EB9AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B4F1EBE9785009EB9AF /* Assets.xcassets */; };
-		1CAF2B531EBE9785009EB9AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B511EBE9785009EB9AF /* LaunchScreen.storyboard */; };
 		1CAF2B5E1EBE9785009EB9AF /* TunnelerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B5D1EBE9785009EB9AF /* TunnelerTests.swift */; };
 		1CAF2B631EBE9785009EB9AF /* Tunneler WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1CAF2B621EBE9785009EB9AF /* Tunneler WatchKit App.app */; };
 		1CAF2B691EBE9785009EB9AF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B671EBE9785009EB9AF /* Interface.storyboard */; };
@@ -22,6 +21,22 @@
 		1CAF2B7D1EBE9786009EB9AF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B7C1EBE9786009EB9AF /* NotificationController.swift */; };
 		1CAF2B7F1EBE9786009EB9AF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B7E1EBE9786009EB9AF /* ComplicationController.swift */; };
 		1CAF2B811EBE9786009EB9AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B801EBE9786009EB9AF /* Assets.xcassets */; };
+		1CAF2B941EBE9B60009EB9AF /* TunnelerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B931EBE9B60009EB9AF /* TunnelerAPI.swift */; };
+		1CCC28321EC15E2500587132 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC28311EC15E2500587132 /* Alamofire.framework */; };
+		1CCC28361EC1609B00587132 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC28341EC1608700587132 /* Alamofire.framework */; };
+		1CCC28381EC160E800587132 /* TunnelerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B931EBE9B60009EB9AF /* TunnelerAPI.swift */; };
+		1CCC283A1EC1662900587132 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC28391EC1662900587132 /* Unbox.framework */; };
+		1CCC283C1EC1663500587132 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC283B1EC1663500587132 /* Unbox.framework */; };
+		1CCC283E1EC1688A00587132 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC283D1EC1688A00587132 /* SwiftyJSON.framework */; };
+		1CCC28401EC1689000587132 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCC283F1EC1689000587132 /* SwiftyJSON.framework */; };
+		1CCC28421EC168FE00587132 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28411EC168FE00587132 /* Router.swift */; };
+		1CCC28431EC168FE00587132 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28411EC168FE00587132 /* Router.swift */; };
+		1CCC28471EC16A5C00587132 /* TunnelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28461EC16A5C00587132 /* TunnelStatus.swift */; };
+		1CCC28481EC16A5C00587132 /* TunnelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28461EC16A5C00587132 /* TunnelStatus.swift */; };
+		1CCC284A1EC2183700587132 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28491EC2183700587132 /* Store.swift */; };
+		1CCC284B1EC2183700587132 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC28491EC2183700587132 /* Store.swift */; };
+		1CCC284D1EC2230700587132 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC284C1EC2230700587132 /* SetupViewController.swift */; };
+		1CCC28501EC2649F00587132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC284F1EC2649F00587132 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +94,6 @@
 		1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1CAF2B4D1EBE9785009EB9AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CAF2B4F1EBE9785009EB9AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1CAF2B521EBE9785009EB9AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CAF2B541EBE9785009EB9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CAF2B591EBE9785009EB9AF /* TunnelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TunnelerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAF2B5D1EBE9785009EB9AF /* TunnelerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelerTests.swift; sourceTree = "<group>"; };
@@ -96,6 +110,18 @@
 		1CAF2B7E1EBE9786009EB9AF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		1CAF2B801EBE9786009EB9AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CAF2B821EBE9786009EB9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CAF2B931EBE9B60009EB9AF /* TunnelerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunnelerAPI.swift; sourceTree = "<group>"; };
+		1CCC28311EC15E2500587132 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1CCC28341EC1608700587132 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
+		1CCC28391EC1662900587132 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = Carthage/Build/watchOS/Unbox.framework; sourceTree = "<group>"; };
+		1CCC283B1EC1663500587132 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
+		1CCC283D1EC1688A00587132 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1CCC283F1EC1689000587132 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/watchOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		1CCC28411EC168FE00587132 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1CCC28461EC16A5C00587132 /* TunnelStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunnelStatus.swift; sourceTree = "<group>"; };
+		1CCC28491EC2183700587132 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		1CCC284C1EC2230700587132 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		1CCC284F1EC2649F00587132 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +129,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCC28321EC15E2500587132 /* Alamofire.framework in Frameworks */,
+				1CCC283A1EC1662900587132 /* Unbox.framework in Frameworks */,
+				1CCC283E1EC1688A00587132 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCC28361EC1609B00587132 /* Alamofire.framework in Frameworks */,
+				1CCC283C1EC1663500587132 /* Unbox.framework in Frameworks */,
+				1CCC28401EC1689000587132 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +163,7 @@
 				1CAF2B661EBE9785009EB9AF /* Tunneler WatchKit App */,
 				1CAF2B751EBE9786009EB9AF /* Tunneler WatchKit Extension */,
 				1CAF2B461EBE9785009EB9AF /* Products */,
+				1CCC28301EC15E2500587132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,12 +181,14 @@
 		1CAF2B471EBE9785009EB9AF /* Tunneler */ = {
 			isa = PBXGroup;
 			children = (
+				1CCC28451EC16A5300587132 /* Models */,
 				1CAF2B481EBE9785009EB9AF /* AppDelegate.swift */,
-				1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */,
+				1CCC284E1EC2638F00587132 /* Controllers */,
 				1CAF2B4C1EBE9785009EB9AF /* Main.storyboard */,
 				1CAF2B4F1EBE9785009EB9AF /* Assets.xcassets */,
-				1CAF2B511EBE9785009EB9AF /* LaunchScreen.storyboard */,
+				1CCC284F1EC2649F00587132 /* LaunchScreen.storyboard */,
 				1CAF2B541EBE9785009EB9AF /* Info.plist */,
+				1CCC28441EC1692800587132 /* API */,
 			);
 			path = Tunneler;
 			sourceTree = "<group>";
@@ -199,6 +234,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1CCC28301EC15E2500587132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC283F1EC1689000587132 /* SwiftyJSON.framework */,
+				1CCC283D1EC1688A00587132 /* SwiftyJSON.framework */,
+				1CCC283B1EC1663500587132 /* Unbox.framework */,
+				1CCC28391EC1662900587132 /* Unbox.framework */,
+				1CCC28341EC1608700587132 /* Alamofire.framework */,
+				1CCC28311EC15E2500587132 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CCC28441EC1692800587132 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF2B931EBE9B60009EB9AF /* TunnelerAPI.swift */,
+				1CCC28411EC168FE00587132 /* Router.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		1CCC28451EC16A5300587132 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC28461EC16A5C00587132 /* TunnelStatus.swift */,
+				1CCC28491EC2183700587132 /* Store.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1CCC284E1EC2638F00587132 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */,
+				1CCC284C1EC2230700587132 /* SetupViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +285,7 @@
 				1CAF2B421EBE9785009EB9AF /* Frameworks */,
 				1CAF2B431EBE9785009EB9AF /* Resources */,
 				1CAF2B8C1EBE9786009EB9AF /* Embed Watch Content */,
+				1CCC28331EC15EBD00587132 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -263,6 +339,7 @@
 				1CAF2B6D1EBE9786009EB9AF /* Sources */,
 				1CAF2B6E1EBE9786009EB9AF /* Frameworks */,
 				1CAF2B6F1EBE9786009EB9AF /* Resources */,
+				1CCC28371EC160AD00587132 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -297,6 +374,7 @@
 					1CAF2B611EBE9785009EB9AF = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = TJMRT497L9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					1CAF2B701EBE9786009EB9AF = {
@@ -332,7 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CAF2B531EBE9785009EB9AF /* LaunchScreen.storyboard in Resources */,
+				1CCC28501EC2649F00587132 /* LaunchScreen.storyboard in Resources */,
 				1CAF2B501EBE9785009EB9AF /* Assets.xcassets in Resources */,
 				1CAF2B4E1EBE9785009EB9AF /* Main.storyboard in Resources */,
 			);
@@ -364,13 +442,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CCC28331EC15EBD00587132 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Unbox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		1CCC28371EC160AD00587132 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/Unbox.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/SwiftyJSON.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1CAF2B411EBE9785009EB9AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCC28421EC168FE00587132 /* Router.swift in Sources */,
 				1CAF2B4B1EBE9785009EB9AF /* ViewController.swift in Sources */,
+				1CAF2B941EBE9B60009EB9AF /* TunnelerAPI.swift in Sources */,
+				1CCC284A1EC2183700587132 /* Store.swift in Sources */,
 				1CAF2B491EBE9785009EB9AF /* AppDelegate.swift in Sources */,
+				1CCC28471EC16A5C00587132 /* TunnelStatus.swift in Sources */,
+				1CCC284D1EC2230700587132 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +506,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCC28481EC16A5C00587132 /* TunnelStatus.swift in Sources */,
+				1CCC28381EC160E800587132 /* TunnelerAPI.swift in Sources */,
 				1CAF2B7D1EBE9786009EB9AF /* NotificationController.swift in Sources */,
+				1CCC284B1EC2183700587132 /* Store.swift in Sources */,
 				1CAF2B7F1EBE9786009EB9AF /* ComplicationController.swift in Sources */,
 				1CAF2B7B1EBE9786009EB9AF /* ExtensionDelegate.swift in Sources */,
+				1CCC28431EC168FE00587132 /* Router.swift in Sources */,
 				1CAF2B791EBE9786009EB9AF /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,14 +544,6 @@
 				1CAF2B4D1EBE9785009EB9AF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1CAF2B511EBE9785009EB9AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CAF2B521EBE9785009EB9AF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		1CAF2B671EBE9785009EB9AF /* Interface.storyboard */ = {
@@ -539,6 +655,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = TJMRT497L9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tunneler WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler.watchkitapp.watchkitextension;
@@ -547,7 +668,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -556,6 +677,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = TJMRT497L9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tunneler WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler.watchkitapp.watchkitextension;
@@ -564,7 +690,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -573,16 +699,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = TJMRT497L9;
 				IBSC_MODULE = Tunneler_WatchKit_Extension;
 				INFOPLIST_FILE = "Tunneler WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -591,16 +720,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = TJMRT497L9;
 				IBSC_MODULE = Tunneler_WatchKit_Extension;
 				INFOPLIST_FILE = "Tunneler WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -609,6 +740,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TJMRT497L9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = Tunneler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler;
@@ -622,6 +758,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TJMRT497L9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = Tunneler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.rcdilorenzo.Tunneler;
@@ -679,6 +820,7 @@
 				1CAF2B871EBE9786009EB9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CAF2B891EBE9786009EB9AF /* Build configuration list for PBXNativeTarget "Tunneler WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -687,6 +829,7 @@
 				1CAF2B8B1EBE9786009EB9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CAF2B8D1EBE9786009EB9AF /* Build configuration list for PBXNativeTarget "Tunneler" */ = {
 			isa = XCConfigurationList;
@@ -695,6 +838,7 @@
 				1CAF2B8F1EBE9786009EB9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CAF2B901EBE9786009EB9AF /* Build configuration list for PBXNativeTarget "TunnelerTests" */ = {
 			isa = XCConfigurationList;
@@ -703,6 +847,7 @@
 				1CAF2B921EBE9786009EB9AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

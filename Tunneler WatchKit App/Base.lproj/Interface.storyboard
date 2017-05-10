@@ -1,16 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tunneler_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="C8N-cR-ksx">
+                            <items>
+                                <label width="1" height="30" alignment="center" text="Tunnel Status" textAlignment="center" id="ISk-mD-9YR">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <group height="48" alignment="center" id="Vtw-bG-ynV">
+                                    <items>
+                                        <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="5vs-Xa-CQH"/>
+                                        <label alignment="left" verticalAlignment="center" text="Unknown" id="FGY-jP-DkH"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="86L-k4-8gO">
+                            <connections>
+                                <action selector="toggleTapped" destination="AgC-eL-Hgc" id="IO1-TT-VfD"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Refresh" id="CJt-ud-6hD">
+                            <connections>
+                                <action selector="refreshTapped" destination="AgC-eL-Hgc" id="z9h-OJ-YPe"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="statusImage" destination="5vs-Xa-CQH" id="YLx-1v-QjB"/>
+                        <outlet property="statusText" destination="FGY-jP-DkH" id="FgR-hs-vyj"/>
+                        <outlet property="toggleButton" destination="86L-k4-8gO" id="lhn-jj-D2c"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="180" y="248"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +65,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Tunneler_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
