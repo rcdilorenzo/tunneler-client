@@ -41,10 +41,10 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func save(_ sender: Any) {
         guard valid else { return }
-        verifyServer {
+//        verifyServer {
             Store.shared.baseUrl = self.serverField.text!
             self.setupIsComplete(animated: true)
-        }
+//        }
     }
 
     func setupIsComplete(animated: Bool) {

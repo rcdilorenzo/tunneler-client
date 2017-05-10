@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, StoreListener {
     @IBOutlet var statusImage: WKInterfaceImage!
     @IBOutlet var statusText: WKInterfaceLabel!
     @IBOutlet var toggleButton: WKInterfaceButton!
@@ -33,6 +33,12 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
         status = Store.shared.status
         TunnelerAPI.loadStatus { self.status = $0 }
+        Store.shared.addListener(target: self)
+    }
+
+    override func willDisappear() {
+        super.willDisappear()
+        Store.shared.removeListener(self)
     }
 
     func setActionButtonTitle(status: TunnelStatus) {
@@ -74,5 +80,14 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func refreshTapped() {
         TunnelerAPI.loadStatus { self.status = $0 }
+    }
+
+    func storeUpdated(store: Store, key: String, rawValue: Any) {
+        if status != store.status {
+            status = store.status
+        }
+        if key == "store.base-url" {
+            refreshTapped()
+        }
     }
 }

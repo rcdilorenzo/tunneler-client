@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0803181EC38518000121A0 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0803171EC38518000121A0 /* SessionDelegate.swift */; };
+		1C08031B1EC389E8000121A0 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C08031A1EC389E8000121A0 /* SessionDelegate.swift */; };
 		1CAF2B491EBE9785009EB9AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B481EBE9785009EB9AF /* AppDelegate.swift */; };
 		1CAF2B4B1EBE9785009EB9AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */; };
 		1CAF2B4E1EBE9785009EB9AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAF2B4C1EBE9785009EB9AF /* Main.storyboard */; };
@@ -89,6 +91,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C0803171EC38518000121A0 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		1C08031A1EC389E8000121A0 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		1CAF2B451EBE9785009EB9AF /* Tunneler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tunneler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAF2B481EBE9785009EB9AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CAF2B4A1EBE9785009EB9AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0803161EC384D2000121A0 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1CAF2B4C1EBE9785009EB9AF /* Main.storyboard */,
+				1CCC284F1EC2649F00587132 /* LaunchScreen.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
 		1CAF2B3C1EBE9785009EB9AF = {
 			isa = PBXGroup;
 			children = (
@@ -181,14 +194,14 @@
 		1CAF2B471EBE9785009EB9AF /* Tunneler */ = {
 			isa = PBXGroup;
 			children = (
-				1CCC28451EC16A5300587132 /* Models */,
 				1CAF2B481EBE9785009EB9AF /* AppDelegate.swift */,
-				1CCC284E1EC2638F00587132 /* Controllers */,
-				1CAF2B4C1EBE9785009EB9AF /* Main.storyboard */,
-				1CAF2B4F1EBE9785009EB9AF /* Assets.xcassets */,
-				1CCC284F1EC2649F00587132 /* LaunchScreen.storyboard */,
-				1CAF2B541EBE9785009EB9AF /* Info.plist */,
+				1C0803171EC38518000121A0 /* SessionDelegate.swift */,
 				1CCC28441EC1692800587132 /* API */,
+				1CCC28451EC16A5300587132 /* Models */,
+				1CCC284E1EC2638F00587132 /* Controllers */,
+				1C0803161EC384D2000121A0 /* User Interface */,
+				1CAF2B541EBE9785009EB9AF /* Info.plist */,
+				1CAF2B4F1EBE9785009EB9AF /* Assets.xcassets */,
 			);
 			path = Tunneler;
 			sourceTree = "<group>";
@@ -219,6 +232,7 @@
 				1CAF2B7A1EBE9786009EB9AF /* ExtensionDelegate.swift */,
 				1CAF2B7C1EBE9786009EB9AF /* NotificationController.swift */,
 				1CAF2B7E1EBE9786009EB9AF /* ComplicationController.swift */,
+				1C08031A1EC389E8000121A0 /* SessionDelegate.swift */,
 				1CAF2B801EBE9786009EB9AF /* Assets.xcassets */,
 				1CAF2B821EBE9786009EB9AF /* Info.plist */,
 				1CAF2B761EBE9786009EB9AF /* Supporting Files */,
@@ -491,6 +505,7 @@
 				1CAF2B491EBE9785009EB9AF /* AppDelegate.swift in Sources */,
 				1CCC28471EC16A5C00587132 /* TunnelStatus.swift in Sources */,
 				1CCC284D1EC2230700587132 /* SetupViewController.swift in Sources */,
+				1C0803181EC38518000121A0 /* SessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +524,7 @@
 				1CCC28481EC16A5C00587132 /* TunnelStatus.swift in Sources */,
 				1CCC28381EC160E800587132 /* TunnelerAPI.swift in Sources */,
 				1CAF2B7D1EBE9786009EB9AF /* NotificationController.swift in Sources */,
+				1C08031B1EC389E8000121A0 /* SessionDelegate.swift in Sources */,
 				1CCC284B1EC2183700587132 /* Store.swift in Sources */,
 				1CAF2B7F1EBE9786009EB9AF /* ComplicationController.swift in Sources */,
 				1CAF2B7B1EBE9786009EB9AF /* ExtensionDelegate.swift in Sources */,

@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import WatchConnectivity
+
+protocol StoreListener: NSObjectProtocol {
+    func storeUpdated(store: Store, key: String, rawValue: Any)
+}
 
 class Store {
     static var shared = Store(backingStore: .standard)
 
     private var middleBacking = Dictionary<String, Any>()
     private var backingStore: UserDefaults?
+    private var listeners = [StoreListener]()
 
     var status: TunnelStatus {
         get {
@@ -36,7 +42,29 @@ class Store {
         self.backingStore = backingStore
     }
 
+    func addListener(target: StoreListener) {
+        listeners.append(target)
+    }
+
+    func removeListener(_ target: StoreListener) {
+        listeners = listeners.filter { $0.isEqual(target) }
+    }
+
+    func updateFromUserInfoTransfer(userInfo: [String: Any]) {
+        for key in userInfo.keys {
+            setValueOnly(value: userInfo[key], forKey: key)
+        }
+    }
+
     private func setValue<T>(value: T, forKey key: String) {
+        setValueOnly(value: value, forKey: key)
+        for listener in listeners {
+            listener.storeUpdated(store: self, key: key, rawValue: value)
+        }
+        WCSession.default().transferUserInfo(["Store": [key: value]])
+    }
+
+    private func setValueOnly<T>(value: T, forKey key: String) {
         middleBacking[key] = value
         backingStore?.set(value, forKey: key)
         self.backingStore?.synchronize()
