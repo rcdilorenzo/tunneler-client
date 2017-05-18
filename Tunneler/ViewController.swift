@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreListener {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
 
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         status = Store.shared.status
         UIApplication.shared.statusBarStyle = .lightContent
+        Store.shared.addListener(target: self)
     }
 
     @IBAction func performAction(_ sender: Any) {
@@ -73,6 +74,12 @@ class ViewController: UIViewController {
     @IBAction func refresh(_ sender: Any) {
         status = .InProgress
         TunnelerAPI.loadStatus { self.status = $0 }
+    }
+
+    func storeUpdated(store: Store, key: String, rawValue: Any) {
+        if key == "store.status" && status != store.status {
+            status = store.status
+        }
     }
 }
 
