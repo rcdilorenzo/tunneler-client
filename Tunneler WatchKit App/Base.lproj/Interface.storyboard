@@ -21,7 +21,7 @@
                                 <group height="48" alignment="center" id="Vtw-bG-ynV">
                                     <items>
                                         <imageView width="30" height="30" alignment="left" verticalAlignment="center" id="5vs-Xa-CQH"/>
-                                        <label alignment="left" verticalAlignment="center" text="Unknown" id="FGY-jP-DkH"/>
+                                        <label height="54" alignment="left" verticalAlignment="center" text="Unknown" numberOfLines="2" id="FGY-jP-DkH"/>
                                     </items>
                                 </group>
                             </items>

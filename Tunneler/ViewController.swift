@@ -19,10 +19,16 @@ class ViewController: UIViewController, StoreListener {
     var status = TunnelStatus.Unknown {
         didSet {
             Store.shared.status = status
-            statusLabel.text = status.rawValue
+            updateStatusLabel()
             switch status {
             case .Unknown:
                 view.backgroundColor = .lightGray
+                actionButton.setTitle("Start", for: .normal)
+                actionButton.setTitleColor(greenColor, for: .normal)
+                actionButton.isEnabled = false
+                break;
+            case .Unauthorized:
+                view.backgroundColor = redColor
                 actionButton.setTitle("Start", for: .normal)
                 actionButton.setTitleColor(greenColor, for: .normal)
                 actionButton.isEnabled = false
@@ -49,6 +55,14 @@ class ViewController: UIViewController, StoreListener {
         }
     }
 
+    var port: Int {
+        get { return Store.shared.port }
+        set(port) {
+            Store.shared.port = port
+            updateStatusLabel()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         status = Store.shared.status
@@ -56,14 +70,28 @@ class ViewController: UIViewController, StoreListener {
         Store.shared.addListener(target: self)
     }
 
+    func updateStatus(status: TunnelStatus, port: Int) {
+        self.status = status
+        self.port = port
+    }
+
+    func updateStatusLabel() {
+        guard port != 0
+            else { return statusLabel.text = status.rawValue }
+
+        statusLabel.text = "\(status.rawValue) on \(port)"
+    }
+
     @IBAction func performAction(_ sender: Any) {
         switch status {
         case .Stopped:
             status = .InProgress
+            port = 0
             TunnelerAPI.startTunnel { self.status = $0 }
             break;
         case .Running:
             status = .InProgress
+            port = 0
             TunnelerAPI.stopTunnel { self.status = $0 }
             break;
         default:
@@ -73,12 +101,15 @@ class ViewController: UIViewController, StoreListener {
 
     @IBAction func refresh(_ sender: Any) {
         status = .InProgress
-        TunnelerAPI.loadStatus { self.status = $0 }
+        port = 0
+        TunnelerAPI.loadStatus(completion: updateStatus(status:port:))
     }
 
     func storeUpdated(store: Store, key: String, rawValue: Any) {
         if key == "store.status" && status != store.status {
             status = store.status
+        } else if key == "store.port" && port != store.port {
+            port = store.port
         }
     }
 }

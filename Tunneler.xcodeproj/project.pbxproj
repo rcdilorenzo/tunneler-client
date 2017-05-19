@@ -466,6 +466,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Unbox.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -483,6 +484,7 @@
 				"$(SRCROOT)/Carthage/Build/watchOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/watchOS/Unbox.framework",
 				"$(SRCROOT)/Carthage/Build/watchOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/KeychainSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (

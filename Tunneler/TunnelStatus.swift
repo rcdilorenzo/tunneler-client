@@ -14,6 +14,7 @@ enum TunnelStatus: String {
     case Stopped = "Stopped"
     case InProgress = "In Progress"
     case Unknown = "Unknown"
+    case Unauthorized = "Unauthorized"
 
     static func fromString(string: String) -> TunnelStatus {
         switch string {
@@ -45,6 +46,8 @@ enum TunnelStatus: String {
             return .green
         case .InProgress:
             return .blue
+        case .Unauthorized:
+            return .red
         case .Stopped:
             return .red
         }

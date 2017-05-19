@@ -14,6 +14,10 @@ enum Router: URLRequestConvertible {
     case stop()
     case status()
 
+    var isAuthRequired: Bool {
+        return true
+    }
+
     var method: HTTPMethod {
         switch self {
         case .start:
@@ -40,8 +44,15 @@ enum Router: URLRequestConvertible {
 
     func asURLRequest() throws -> URLRequest {
         let url = try Store.shared.baseUrl.asURL()
-
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+
+        if isAuthRequired {
+            let loginString = String(format: "%@:%@", Store.shared.username, Store.shared.password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString = loginData.base64EncodedString()
+            urlRequest.addValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        }
+
         urlRequest.httpMethod = method.rawValue
 
         return urlRequest

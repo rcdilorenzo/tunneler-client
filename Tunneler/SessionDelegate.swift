@@ -20,9 +20,11 @@ class SessionDelegate: NSObject, WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        guard let storeInfo = userInfo["Store"] as? [String: Any]
-            else { return }
-
-        Store.shared.updateFromUserInfoTransfer(userInfo: storeInfo)
+        if let storeInfo = userInfo["Store"] as? [String: Any] {
+            Store.shared.updateFromUserInfoTransfer(userInfo: storeInfo)
+        }
+        if let storeInfo = userInfo["SecureStore"] as? [String: Any] {
+            Store.shared.updateFromSecureUserInfoTransfer(userInfo: storeInfo)
+        }
     }
 }

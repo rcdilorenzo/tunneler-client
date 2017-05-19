@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopped" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxP-oT-A3l">
-                                <rect key="frame" x="117" y="255" width="141" height="36"/>
+                                <rect key="frame" x="87.5" y="255" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="NnK-cS-ofJ"/>
-                                    <constraint firstAttribute="width" constant="141" id="c8b-Ty-EnR"/>
+                                    <constraint firstAttribute="width" constant="200" id="c8b-Ty-EnR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,19 +104,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Server Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPd-bX-Xsq">
-                                <rect key="frame" x="67" y="231" width="240" height="30"/>
+                                <rect key="frame" x="67" y="293.5" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fJ9-bJ-3DN" id="OX0-mU-pYW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tunneler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-OW-y3c">
-                                <rect key="frame" x="16" y="167.5" width="343" height="33.5"/>
+                                <rect key="frame" x="16" y="163.5" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-a7-O7U">
-                                <rect key="frame" x="258" y="269" width="49" height="32"/>
+                                <rect key="frame" x="258" y="331.5" width="49" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="9Qp-GH-0Bg"/>
                                 </constraints>
@@ -127,23 +130,41 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-bR-UU4">
-                                <rect key="frame" x="67" y="266" width="183" height="15"/>
+                                <rect key="frame" x="67" y="328.5" width="183" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.6504614637305699" green="0.27792501116143836" blue="0.29155127273962989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-fA-XBD">
+                                <rect key="frame" x="67" y="255.5" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBJ-Zo-no6">
+                                <rect key="frame" x="67" y="217" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" red="0.071880953230000003" green="0.57230675220000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3nK-a7-O7U" firstAttribute="leading" secondItem="G1x-bR-UU4" secondAttribute="trailing" constant="8" id="4xa-7a-u5Q"/>
+                            <constraint firstItem="PBJ-Zo-no6" firstAttribute="width" secondItem="Aa0-fA-XBD" secondAttribute="width" id="6Hc-JD-prg"/>
                             <constraint firstItem="G1x-bR-UU4" firstAttribute="leading" secondItem="PPd-bX-Xsq" secondAttribute="leading" id="AUH-4u-RaH"/>
-                            <constraint firstItem="PPd-bX-Xsq" firstAttribute="top" secondItem="Hrs-OW-y3c" secondAttribute="bottom" constant="30" id="DsL-Wh-QiW"/>
                             <constraint firstItem="PPd-bX-Xsq" firstAttribute="leading" secondItem="HLC-g7-Q4y" secondAttribute="leadingMargin" constant="51" id="ERS-xZ-LeF"/>
-                            <constraint firstItem="PPd-bX-Xsq" firstAttribute="centerY" secondItem="HLC-g7-Q4y" secondAttribute="centerY" constant="-87.5" id="Eqh-TL-zcq"/>
+                            <constraint firstItem="PPd-bX-Xsq" firstAttribute="centerY" secondItem="HLC-g7-Q4y" secondAttribute="centerY" constant="-25" id="Eqh-TL-zcq"/>
+                            <constraint firstItem="PPd-bX-Xsq" firstAttribute="top" secondItem="Aa0-fA-XBD" secondAttribute="bottom" constant="8" id="Fps-NT-HwB"/>
+                            <constraint firstItem="Aa0-fA-XBD" firstAttribute="width" secondItem="PPd-bX-Xsq" secondAttribute="width" id="Irb-nk-FWU"/>
                             <constraint firstItem="3nK-a7-O7U" firstAttribute="trailing" secondItem="PPd-bX-Xsq" secondAttribute="trailing" id="Jax-Ff-4gX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PPd-bX-Xsq" secondAttribute="trailing" constant="52" id="Q4R-Bs-BGq"/>
+                            <constraint firstItem="PBJ-Zo-no6" firstAttribute="centerX" secondItem="PPd-bX-Xsq" secondAttribute="centerX" id="aDT-ua-Ywl"/>
+                            <constraint firstItem="PBJ-Zo-no6" firstAttribute="top" secondItem="Hrs-OW-y3c" secondAttribute="bottom" constant="20" id="brQ-Vc-bqi"/>
+                            <constraint firstItem="Aa0-fA-XBD" firstAttribute="top" secondItem="PBJ-Zo-no6" secondAttribute="bottom" constant="8.5" id="jpN-fx-UHl"/>
                             <constraint firstItem="3nK-a7-O7U" firstAttribute="top" secondItem="PPd-bX-Xsq" secondAttribute="bottom" constant="8" id="n3S-le-mkX"/>
+                            <constraint firstItem="Aa0-fA-XBD" firstAttribute="centerX" secondItem="PPd-bX-Xsq" secondAttribute="centerX" id="oTi-VS-j9p"/>
                             <constraint firstItem="G1x-bR-UU4" firstAttribute="top" secondItem="PPd-bX-Xsq" secondAttribute="bottom" constant="5" id="vhO-r4-Jmb"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Hrs-OW-y3c" secondAttribute="leading" id="wVb-WV-M1n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hrs-OW-y3c" secondAttribute="trailing" id="zN0-mu-Rgs"/>
@@ -151,7 +172,9 @@
                     </view>
                     <connections>
                         <outlet property="errorMessage" destination="G1x-bR-UU4" id="nXq-gG-g6F"/>
+                        <outlet property="passwordField" destination="Aa0-fA-XBD" id="ra1-yF-zd4"/>
                         <outlet property="serverField" destination="PPd-bX-Xsq" id="kyJ-dm-srP"/>
+                        <outlet property="usernameField" destination="PBJ-Zo-no6" id="NYg-Af-ql1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sau-Ue-t2d" userLabel="First Responder" sceneMemberID="firstResponder"/>

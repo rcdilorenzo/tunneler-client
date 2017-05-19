@@ -18,10 +18,18 @@ class InterfaceController: WKInterfaceController, StoreListener {
     var status: TunnelStatus {
         get { return Store.shared.status }
         set(status) {
-            statusImage.setImage(status.imageRepresentation())
-            statusText.setText(status.rawValue)
-            setActionButtonTitle(status: status)
             Store.shared.status = status
+            statusImage.setImage(status.imageRepresentation())
+            updateStatusLabel()
+            setActionButtonTitle(status: status)
+        }
+    }
+
+    var port: Int {
+        get { return Store.shared.port }
+        set(port) {
+            Store.shared.port = port
+            updateStatusLabel()
         }
     }
 
@@ -32,13 +40,25 @@ class InterfaceController: WKInterfaceController, StoreListener {
     override func willActivate() {
         super.willActivate()
         status = Store.shared.status
-        TunnelerAPI.loadStatus { self.status = $0 }
+        TunnelerAPI.loadStatus(completion: updateStatus(status:port:))
         Store.shared.addListener(target: self)
     }
 
     override func willDisappear() {
         super.willDisappear()
         Store.shared.removeListener(self)
+    }
+
+    func updateStatus(status: TunnelStatus, port: Int) {
+        self.status = status
+        self.port = port
+    }
+
+    func updateStatusLabel() {
+        guard port != 0
+            else { return statusText.setText(status.rawValue) }
+
+        statusText.setText("\(status.rawValue) on \(port)")
     }
 
     func setActionButtonTitle(status: TunnelStatus) {
@@ -58,13 +78,15 @@ class InterfaceController: WKInterfaceController, StoreListener {
     }
 
     func startTunnel() {
-        self.status = .InProgress
+        status = .InProgress
+        port = 0
         TunnelerAPI.startTunnel { self.status = $0 }
     }
 
     func stopTunnel() {
-        self.status = .InProgress
-        TunnelerAPI.stopTunnel { self.status = $0 }
+        status = .InProgress
+        port = 0
+        TunnelerAPI.stopTunnel { self.status = $0; self.port = 0 }
     }
 
     @IBAction func toggleTapped() {
@@ -79,7 +101,7 @@ class InterfaceController: WKInterfaceController, StoreListener {
     }
 
     @IBAction func refreshTapped() {
-        TunnelerAPI.loadStatus { self.status = $0 }
+        TunnelerAPI.loadStatus(completion: updateStatus(status:port:))
     }
 
     func storeUpdated(store: Store, key: String, rawValue: Any) {

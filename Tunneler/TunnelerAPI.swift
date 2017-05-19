@@ -26,28 +26,12 @@ enum HTTPError: String {
 }
 
 class TunnelerAPI {
-    static func loadStatus(completion: @escaping (TunnelStatus) -> ()) {
-        sendRequest(Router.status(), successCode: .ok, failure: { (_error) in
+    fileprivate static func statusFailureBlock(_ completion: @escaping (TunnelStatus) -> ()) -> ((String) -> ()) {
+        return { (error) in
+            guard error != HTTPError.Unauthorized.rawValue
+                else { return completion(.Unauthorized) }
             completion(.Unknown)
-        }, success: { json in
-            completion(TunnelStatus.fromString(string: json["status"].stringValue))
-        })
-    }
-
-    static func startTunnel(completion: @escaping (TunnelStatus) -> ()) {
-        sendRequest(Router.start(), successCode: .ok, failure: { (_error) in
-            completion(.Unknown)
-        }, success: { json in
-            completion(.Running)
-        })
-    }
-
-    static func stopTunnel(completion: @escaping (TunnelStatus) -> ()) {
-        sendRequest(Router.stop(), successCode: .ok, failure: { (_error) in
-            completion(.Unknown)
-        }, success: { json in
-            completion(.Stopped)
-        })
+        }
     }
 
     fileprivate static func sendRequest(_ request: Router, successCode: HTTPStatusCode, failure: FailureBlock, success: @escaping (JSON) -> ()) {
@@ -100,5 +84,33 @@ class TunnelerAPI {
         if let failureBlock = failure {
             failureBlock(message)
         }
+    }
+}
+
+extension TunnelerAPI {
+    static func loadStatus(completion: @escaping (TunnelStatus, Int) -> ()) {
+        sendRequest(Router.status(),
+                    successCode: .ok,
+                    failure: TunnelerAPI.statusFailureBlock({ completion($0, 0) }),
+                    success: { json in
+                        completion(
+                            TunnelStatus.fromString(string: json["status"].stringValue),
+                            json["tunnel"]["port"].int ?? 0
+                        )
+        })
+    }
+
+    static func startTunnel(completion: @escaping (TunnelStatus) -> ()) {
+        sendRequest(Router.start(),
+                    successCode: .ok,
+                    failure: TunnelerAPI.statusFailureBlock(completion),
+                    success: { _ in completion(.Running) })
+    }
+
+    static func stopTunnel(completion: @escaping (TunnelStatus) -> ()) {
+        sendRequest(Router.stop(),
+                    successCode: .ok,
+                    failure: TunnelerAPI.statusFailureBlock(completion),
+                    success: { _ in completion(.Stopped) })
     }
 }
