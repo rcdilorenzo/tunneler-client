@@ -53,7 +53,7 @@ class Store {
         for listener in listeners {
             listener.storeUpdated(store: self, key: key, rawValue: value)
         }
-        WCSession.default().transferUserInfo(["SecureStore": [key: value]])
+        WCSession.default.transferUserInfo(["SecureStore": [key: value]])
     }
 
     fileprivate func setSecureValueOnly(value: String, forKey key: String) {
@@ -65,7 +65,7 @@ class Store {
         for listener in listeners {
             listener.storeUpdated(store: self, key: key, rawValue: value)
         }
-        WCSession.default().transferUserInfo(["Store": [key: value]])
+        WCSession.default.transferUserInfo(["Store": [key: value]])
     }
 
     fileprivate func setValueOnly<T>(value: T, forKey key: String) {

@@ -50,7 +50,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
     func setupAppConnectivity() {
-        let session = WCSession.default()
+        let session = WCSession.default
         session.delegate = sessionDelegate
         session.activate()
     }

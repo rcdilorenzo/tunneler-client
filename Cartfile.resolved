@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "4.4.0"
-github "SwiftyJSON/SwiftyJSON" "3.1.4"
-github "johnsundell/unbox" "2.4.0"
+github "Alamofire/Alamofire" "4.7.2"
+github "SwiftyJSON/SwiftyJSON" "4.1.0"
+github "johnsundell/unbox" "2.5.0"
 github "marketplacer/keychain-swift" "8.0.3"
