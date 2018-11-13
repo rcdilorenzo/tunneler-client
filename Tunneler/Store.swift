@@ -93,6 +93,22 @@ class Store {
 }
 
 extension Store {
+    var canAuthenticate: Bool {
+        return !baseUrl.isEmpty && !username.isEmpty && !password.isEmpty
+    }
+
+    func logout() {
+        username = ""
+        password = ""
+        broadcastCredentials()
+    }
+
+    func broadcastCredentials() {
+        setValue(value: baseUrl, forKey: "store.base-url")
+        setValue(value: username, forKey: "store.username")
+        setSecureValue(value: password, forKey: "store.password")
+    }
+    
     var status: TunnelStatus {
         get {
             let value: String = valueForKey("store.status", defaultValue: "")

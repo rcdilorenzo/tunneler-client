@@ -66,8 +66,16 @@ class ViewController: UIViewController, StoreListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         status = Store.shared.status
-        UIApplication.shared.statusBarStyle = .lightContent
         Store.shared.addListener(target: self)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        TunnelerAPI.loadStatus(completion: updateStatus(status:port:))
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     func updateStatus(status: TunnelStatus, port: Int) {
@@ -80,6 +88,11 @@ class ViewController: UIViewController, StoreListener {
             else { return statusLabel.text = status.rawValue }
 
         statusLabel.text = "\(status.rawValue) on \(port)"
+    }
+
+    @IBAction func logout(_ sender: Any) {
+        Store.shared.logout()
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func performAction(_ sender: Any) {

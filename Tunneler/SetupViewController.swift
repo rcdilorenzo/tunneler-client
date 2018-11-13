@@ -17,12 +17,17 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         serverField.delegate = self
-        UIApplication.shared.statusBarStyle = .default
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !Store.shared.baseUrl.isEmpty {
+        serverField.text = Store.shared.baseUrl
+        if Store.shared.canAuthenticate {
+            Store.shared.broadcastCredentials()
             setupIsComplete(animated: false)
         }
     }
